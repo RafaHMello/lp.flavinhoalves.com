@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0A0908" />
+<title>Sua Primeira Música em 7 Dias | Método Flavinho Alves</title>
+<meta name="description" content="Em 7 dias, toque sua primeira música completa no acordeon com as duas mãos. Método do Flavinho Alves, gaiteiro com 3 discos de ouro. Do zero absoluto, sem partitura. Acesso imediato por R$27." />
+<meta property="og:title" content="Sua Primeira Música em 7 Dias | Método Flavinho Alves" />
+<meta property="og:description" content="Do zero à primeira música completa com as duas mãos em 7 dias. Método Flavinho Alves." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          body: ['Manrope', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink: '#0A0908',
+          coal: '#1A1715',
+          cream: '#FAF6EF',
+          bone: '#F1EADB',
+          gold: '#C89B42',
+          goldDeep: '#9E7A2E',
+          goldSoft: '#E6C989',
+          wine: '#6B1F2A',
+          earth: '#3D2E23',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root {
+    --ink: #0A0908;
+    --coal: #1A1715;
+    --cream: #FAF6EF;
+    --bone: #F1EADB;
+    --gold: #C89B42;
+    --gold-deep: #9E7A2E;
+    --gold-soft: #E6C989;
+    --wine: #6B1F2A;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', system-ui, sans-serif; background: var(--cream); color: var(--ink); }
+
+  .font-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
+
+  /* Textured paper background */
+  .paper-bg {
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(ellipse at top, rgba(200, 155, 66, 0.08), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.04 0 0 0 0 0.03 0 0 0 0 0.02 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .ink-bg {
+    background-color: var(--ink);
+    background-image:
+      radial-gradient(ellipse at 30% 20%, rgba(200, 155, 66, 0.22), transparent 55%),
+      radial-gradient(ellipse at 80% 80%, rgba(107, 31, 42, 0.18), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    background: linear-gradient(180deg, #D8AA4E 0%, var(--gold) 50%, var(--gold-deep) 100%);
+    color: var(--ink);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.35) inset,
+      0 -2px 0 rgba(0,0,0,0.18) inset,
+      0 8px 24px -6px rgba(158, 122, 46, 0.55),
+      0 2px 0 rgba(0,0,0,0.15);
+    transition: transform 120ms ease, box-shadow 200ms ease;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.4) inset,
+      0 -2px 0 rgba(0,0,0,0.22) inset,
+      0 12px 28px -6px rgba(158, 122, 46, 0.65),
+      0 2px 0 rgba(0,0,0,0.2);
+  }
+  .btn-primary:active { transform: translateY(1px); }
+
+  /* Ornament: musical note-like divider */
+  .ornament {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    color: var(--gold-deep); font-size: 0.875rem; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .ornament::before, .ornament::after {
+    content: ''; width: 28px; height: 1px; background: currentColor; opacity: 0.5;
+  }
+
+  /* Serif numerals for day list */
+  .day-num {
+    font-family: 'Fraunces', serif; font-weight: 700; font-style: italic;
+    font-variant-numeric: oldstyle-nums;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  /* Vintage seal animation */
+  @keyframes slowSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .seal-ring { animation: slowSpin 40s linear infinite; }
+
+  /* Subtle reveal on load for hero */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { animation: fadeUp 700ms ease-out both; }
+  .reveal.d1 { animation-delay: 80ms; }
+  .reveal.d2 { animation-delay: 200ms; }
+  .reveal.d3 { animation-delay: 320ms; }
+  .reveal.d4 { animation-delay: 440ms; }
+  .reveal.d5 { animation-delay: 560ms; }
+
+  /* FAQ */
+  details[open] summary .chev { transform: rotate(45deg); }
+  details summary { list-style: none; cursor: pointer; }
+  details summary::-webkit-details-marker { display: none; }
+  .chev { transition: transform 200ms ease; }
+
+  /* Sticky mobile CTA safe-area */
+  .sticky-cta { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+
+  /* Price stroke */
+  .strike { position: relative; display: inline-block; }
+  .strike::after {
+    content: ''; position: absolute; left: -2px; right: -2px; top: 55%;
+    height: 2px; background: var(--wine); transform: rotate(-8deg); opacity: 0.85;
+  }
+
+  /* Gold hairline border helper */
+  .hair-gold { box-shadow: 0 0 0 1px rgba(200, 155, 66, 0.35); }
+
+  /* Decorative dropcap for section leads */
+  .dropcap::first-letter {
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 3.25rem;
+    float: left; line-height: 0.9; padding: 0.25rem 0.5rem 0 0; color: var(--gold-deep);
+  }
+
+  /* Quote mark decoration */
+  .quote-mark {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 900;
+    color: var(--gold); line-height: 0.6; font-size: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .quote-mark { font-size: 5.5rem; }
+  }
+</style>
+</head>
+<body class="paper-bg">
+
+<!-- ==================== ANNOUNCEMENT BAR ==================== -->
+<div class="bg-ink text-goldSoft text-center text-xs sm:text-sm py-2 px-4 font-body tracking-wide">
+  <span class="font-display italic">Oferta de lançamento</span> · De R$97 por <strong class="text-gold">R$27</strong> · Acesso imediato
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section class="ink-bg text-cream relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 pt-10 pb-8 md:pt-20 md:pb-16 grid md:grid-cols-2 gap-8 md:gap-12 items-center relative">
+
+    <div class="relative z-10 order-2 md:order-1">
+      <div class="ornament reveal d1">Método Flavinho Alves</div>
+
+      <h1 class="reveal d2 font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.05] mt-5 tracking-tight">
+        Toque sua primeira<br/>música<span class="italic text-gold"> completa</span><br/>no acordeon <span class="text-goldSoft">em 7 dias.</span>
+      </h1>
+
+      <p class="reveal d3 mt-6 text-lg md:text-xl text-bone/85 leading-relaxed max-w-xl">
+        Mesmo que você nunca tenha tirado uma nota na vida — e esteja convencido de que "não tem mais idade pra isso".
+      </p>
+
+      <div class="reveal d4 mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+        <a href="#oferta" class="btn-primary font-body font-extrabold text-base sm:text-lg px-6 py-4 rounded-lg text-center inline-flex items-center justify-center gap-3">
+          QUERO TOCAR MINHA PRIMEIRA MÚSICA
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="reveal d5 mt-3 text-sm text-bone/70 flex items-center gap-4 flex-wrap">
+        <span class="inline-flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Acesso imediato</span>
+        <span class="inline-flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Garantia de 7 dias</span>
+        <span class="inline-flex items-center gap-1.5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg> Pagamento seguro Hotmart</span>
+      </div>
+    </div>
+
+    <div class="order-1 md:order-2 relative">
+      <!-- Decorative circle behind -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[85%] aspect-square rounded-full"
+             style="background: radial-gradient(circle, rgba(200,155,66,0.35) 0%, rgba(200,155,66,0.05) 55%, transparent 75%);"></div>
+      </div>
+      <img src="images/hero-chapeu.webp" alt="Flavinho Alves tocando acordeon com chapéu tradicional" class="relative w-full max-w-md mx-auto drop-shadow-2xl reveal d1" loading="eager" />
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AUTHORITY STRIP ==================== -->
+<section class="bg-coal text-bone/80 border-y border-gold/20">
+  <div class="max-w-6xl mx-auto px-4 py-5 md:py-6">
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:gap-x-10 text-xs sm:text-sm font-body">
+      <span class="flex items-center gap-2"><span class="text-gold font-display font-bold text-lg">+30</span> anos de estrada</span>
+      <span class="hidden sm:inline text-gold/40">·</span>
+      <span class="flex items-center gap-2"><span class="text-gold font-display font-bold text-lg">3</span> discos de ouro</span>
+      <span class="hidden sm:inline text-gold/40">·</span>
+      <span class="flex items-center gap-2"><span class="text-gold font-display font-bold text-lg">1</span> disco de platina</span>
+      <span class="hidden sm:inline text-gold/40">·</span>
+      <span class="flex items-center gap-2"><span class="text-gold font-display font-bold text-lg">+1.000</span> gravações</span>
+      <span class="hidden sm:inline text-gold/40">·</span>
+      <span class="flex items-center gap-2"><span class="text-gold font-display font-bold text-lg">+2.600</span> alunos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROBLEM ==================== -->
+<section class="paper-bg py-16 md:py-24">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="ornament justify-center w-full flex">Talvez você se reconheça</div>
+    <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight text-ink text-center tracking-tight">
+      A gaita está em casa.<br/><span class="italic text-wine">O sonho, também.</span>
+    </h2>
+
+    <div class="mt-10 space-y-5 text-lg md:text-xl leading-relaxed text-ink/85 font-body">
+      <p class="dropcap">Você comprou com um sonho antigo. Ou ganhou de presente. Ou herdou. Toda vez que abre o estojo, bate aquela vontade enorme de tocar — mas vem junto a dúvida: <em class="font-display text-wine">por onde eu começo?</em></p>
+
+      <p>Você tenta um vídeo no YouTube. Aprende uma nota aqui, outra ali. A mão direita até sai. Mas na hora de juntar com a esquerda — <strong>trava</strong>.</p>
+
+      <p>Aí vem o pior pensamento. Aquele que você não conta pra ninguém:</p>
+
+      <blockquote class="relative pl-10 md:pl-16 py-2 border-l-4 border-gold">
+        <span class="quote-mark absolute left-0 top-0 -ml-1">"</span>
+        <p class="font-display italic text-2xl md:text-3xl text-wine leading-snug">Será que eu não tenho mais idade pra isso?</p>
+      </blockquote>
+
+      <p class="pt-4"><strong class="text-ink">E eu te digo, com 30 anos de estrada:</strong> o problema nunca foi você. Foi a falta de um caminho simples que te pegasse pela mão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOLUTION BRIDGE ==================== -->
+<section class="ink-bg text-cream py-16 md:py-24 relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+    <div class="ornament justify-center w-full flex text-gold">O método</div>
+    <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+      Em 7 dias você sai do zero<br/>e toca sua primeira música <span class="italic text-gold">completa</span>.
+    </h2>
+
+    <p class="mt-8 text-lg md:text-xl text-bone/80 leading-relaxed max-w-2xl mx-auto">
+      Não é dom. Não é sorte. É método. Dividi o que mais trava o iniciante em <strong class="text-gold">7 passos simples</strong> — um por dia. Cada aula curta. Pra você estudar no seu tempo, sem pressa, no celular ou no computador.
+    </p>
+
+    <p class="mt-6 font-display italic text-xl md:text-2xl text-goldSoft">
+      No dia 7, você toca do começo ao fim. Com as duas mãos. Sozinho.
+    </p>
+
+    <div class="mt-10">
+      <a href="#oferta" class="btn-primary font-body font-extrabold text-base md:text-lg px-8 py-4 rounded-lg inline-flex items-center gap-3">
+        QUERO COMEÇAR HOJE — R$27 <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 7 DAYS ==================== -->
+<section class="paper-bg py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center">
+      <div class="ornament justify-center w-full flex">O que acontece</div>
+      <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight text-ink tracking-tight">
+        Seus <span class="italic text-wine">7 dias</span>, passo a passo
+      </h2>
+      <p class="mt-4 text-ink/70 font-body max-w-2xl mx-auto">
+        Cada dia é uma aula curta em vídeo. Entre 15 e 30 minutos. No seu ritmo.
+      </p>
+    </div>
+
+    <ol class="mt-14 space-y-4 md:space-y-5">
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">1</div>
+        <div class="flex-1 pt-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Entendendo a sua gaita</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">Postura, como segurar, como trabalhar o fole. Em 30 minutos, você tira suas primeiras notas.</p>
+        </div>
+      </li>
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">2</div>
+        <div class="flex-1 pt-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Mão direita (teclado)</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">A sequência exata pra dominar as teclas. Sem partitura, sem enrolação.</p>
+        </div>
+      </li>
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">3</div>
+        <div class="flex-1 pt-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Mão esquerda (baixos)</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">Onde 90% dos iniciantes travam. Eu te mostro o atalho que ninguém ensina.</p>
+        </div>
+      </li>
+      <li class="bg-ink text-cream rounded-2xl p-5 md:p-7 flex gap-5 md:gap-8 items-start" style="box-shadow: 0 0 0 1px var(--gold);">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center text-goldSoft">4</div>
+        <div class="flex-1 pt-1">
+          <div class="inline-block text-[10px] uppercase tracking-widest text-gold font-body font-bold mb-2">O ponto-chave</div>
+          <h3 class="font-display font-bold text-xl md:text-2xl">Juntando as duas mãos</h3>
+          <p class="mt-2 text-bone/85 font-body leading-relaxed">O segredo simples que destrava a coordenação. Você sente na hora — e nunca mais trava.</p>
+        </div>
+      </li>
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">5</div>
+        <div class="flex-1 pt-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Ritmo certo</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">Como dar vida na música. Pra não parecer mecânico, pra soar como gaiteiro de verdade.</p>
+        </div>
+      </li>
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">6</div>
+        <div class="flex-1 pt-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Ensaiando a música completa</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">Do começo ao fim, em partes, devagar. Você já sabe mais do que imagina.</p>
+        </div>
+      </li>
+      <li class="bg-cream rounded-2xl p-5 md:p-7 hair-gold flex gap-5 md:gap-8 items-start relative">
+        <div class="day-num text-5xl md:text-7xl shrink-0 w-14 md:w-20 text-center">7</div>
+        <div class="flex-1 pt-1">
+          <div class="inline-block text-[10px] uppercase tracking-widest text-wine font-body font-bold mb-2">O dia que você vai lembrar</div>
+          <h3 class="font-display font-bold text-xl md:text-2xl text-ink">Sua primeira música, do jeito certo</h3>
+          <p class="mt-2 text-ink/75 font-body leading-relaxed">Você toca a música completa, com as duas mãos. Grava um vídeo. E vê o quanto evoluiu em uma semana.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== WHO IS FLAVINHO ==================== -->
+<section class="bg-coal text-cream py-16 md:py-24 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+    <div class="md:col-span-2 relative">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[90%] aspect-[3/4] rounded-full blur-2xl"
+             style="background: radial-gradient(circle, rgba(200,155,66,0.3) 0%, transparent 65%);"></div>
+      </div>
+      <img src="images/flavinho-palco.webp" alt="Flavinho Alves — gaiteiro profissional" class="relative w-full max-w-sm mx-auto rounded-lg hair-gold" loading="lazy" />
+    </div>
+
+    <div class="md:col-span-3">
+      <div class="ornament text-goldSoft">Quem vai te ensinar</div>
+      <h2 class="mt-5 font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+        Não é um <span class="italic text-gold">professor de internet.</span><br/>É um gaiteiro de verdade.
+      </h2>
+      <p class="mt-6 text-lg text-bone/85 leading-relaxed">
+        Flavinho Alves começou a estudar gaita aos 17 anos com o mestre Oscar dos Reis. Já são mais de 30 anos vivendo de acordeon — palco, gravação e ensino.
+      </p>
+
+      <ul class="mt-7 space-y-3 text-bone/90 font-body">
+        <li class="flex gap-3"><span class="text-gold mt-1.5">◆</span><span><strong class="text-cream">3 discos de ouro e 1 de platina</strong></span></li>
+        <li class="flex gap-3"><span class="text-gold mt-1.5">◆</span><span>Mais de <strong class="text-cream">1.000 gravações</strong> em estúdio</span></li>
+        <li class="flex gap-3"><span class="text-gold mt-1.5">◆</span><span>Tocou em <strong class="text-cream">Eco do Minuano, Garotos de Ouro, Tribo da Vaneira, Grupo Candieiro, Os Guapos</strong></span></li>
+        <li class="flex gap-3"><span class="text-gold mt-1.5">◆</span><span>10 anos como gaiteiro do <strong class="text-cream">Clube Maré Alta</strong> (São José/SC)</span></li>
+        <li class="flex gap-3"><span class="text-gold mt-1.5">◆</span><span>Milhares de alunos formados no Brasil e no exterior</span></li>
+      </ul>
+
+      <p class="mt-8 font-display italic text-xl md:text-2xl text-goldSoft leading-snug border-l-4 border-gold pl-5">
+        "Eu não aprendi gaita pra ensinar na internet. Eu vivi de gaita a vida inteira — e agora quero te passar isso do jeito mais simples que já montei."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="paper-bg py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center">
+      <div class="ornament justify-center w-full flex">Gente como você</div>
+      <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight text-ink tracking-tight">
+        Começaram do zero.<br/><span class="italic text-wine">Hoje tocam.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-5 md:gap-6">
+      <figure class="bg-cream rounded-2xl p-7 hair-gold flex flex-col">
+        <div class="quote-mark">"</div>
+        <blockquote class="-mt-6 font-display italic text-lg md:text-xl text-ink leading-snug">
+          Eu achava que não tinha mais idade. Em três meses já tava tocando nas festas de família.
+        </blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-gold/30 text-sm font-body">
+          <div class="font-bold text-ink">Seu Jorge, 62 anos</div>
+          <div class="text-ink/60">Caxias do Sul · RS</div>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-cream rounded-2xl p-7 hair-gold flex flex-col">
+        <div class="quote-mark">"</div>
+        <blockquote class="-mt-6 font-display italic text-lg md:text-xl text-ink leading-snug">
+          Já tinha tentado três cursos. Travava sempre na mão esquerda. Com o Flavinho destravei na primeira semana.
+        </blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-gold/30 text-sm font-body">
+          <div class="font-bold text-ink">Valdemar, 58 anos</div>
+          <div class="text-ink/60">Campo Grande · MS</div>
+        </figcaption>
+      </figure>
+
+      <figure class="bg-cream rounded-2xl p-7 hair-gold flex flex-col">
+        <div class="quote-mark">"</div>
+        <blockquote class="-mt-6 font-display italic text-lg md:text-xl text-ink leading-snug">
+          Nunca tinha pegado uma gaita na vida. No sétimo dia tava tocando do começo ao fim. Não acreditei.
+        </blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-gold/30 text-sm font-body">
+          <div class="font-bold text-ink">Dona Marli, 54 anos</div>
+          <div class="text-ink/60">Ijuí · RS</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="mt-10 text-center text-sm text-ink/50 italic font-body max-w-2xl mx-auto">
+      Depoimentos de alunos reais do método Flavinho Alves. Resultados variam conforme dedicação de cada aluno.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== OFFER ==================== -->
+<section id="oferta" class="ink-bg text-cream py-16 md:py-24 relative">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center">
+      <div class="ornament text-gold justify-center w-full flex">A oferta</div>
+      <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+        Quanto vale tocar sua<br/>primeira música <span class="italic text-gold">de verdade?</span>
+      </h2>
+      <p class="mt-6 text-lg text-bone/80 leading-relaxed max-w-xl mx-auto">
+        Uma aula particular de acordeon custa entre <strong class="text-goldSoft">R$ 80 e R$ 150</strong>. Em uma semana, você gastaria no mínimo R$ 560.
+      </p>
+      <p class="mt-3 text-lg text-bone/80 leading-relaxed max-w-xl mx-auto">
+        Aqui você leva tudo gravado, pra assistir quando quiser, pro resto da vida — por menos do que uma única aula.
+      </p>
+    </div>
+
+    <div class="mt-12 bg-cream text-ink rounded-2xl p-6 md:p-10 relative" style="box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,155,66,0.3);">
+      <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-wine text-cream text-[10px] md:text-xs font-body font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+        Oferta de lançamento
+      </div>
+
+      <h3 class="font-display font-bold text-2xl md:text-3xl text-ink text-center mt-2">
+        Sua Primeira Música em 7 Dias
+      </h3>
+
+      <ul class="mt-7 space-y-3 text-base md:text-lg text-ink/85 font-body">
+        <li class="flex gap-3"><span class="text-gold font-bold mt-0.5">✓</span><span><strong>7 aulas em vídeo</strong> — uma pra cada dia, acesso imediato</span></li>
+        <li class="flex gap-3"><span class="text-gold font-bold mt-0.5">✓</span><span><strong>Material de apoio</strong> pra imprimir e acompanhar</span></li>
+        <li class="flex gap-3"><span class="text-gold font-bold mt-0.5">✓</span><span><strong>Acesso vitalício</strong> — estuda no seu ritmo, pro resto da vida</span></li>
+        <li class="flex gap-3"><span class="text-gold font-bold mt-0.5">✓</span><span><strong>Suporte da equipe</strong> do Flavinho caso trave em algo</span></li>
+      </ul>
+
+      <div class="mt-9 text-center">
+        <div class="text-ink/50 font-body text-sm mb-1">De <span class="strike font-bold text-wine/90">R$ 97</span> por apenas</div>
+        <div class="flex items-baseline justify-center gap-1 font-display">
+          <span class="text-4xl md:text-5xl font-bold text-ink">R$</span>
+          <span class="text-7xl md:text-8xl font-bold text-ink leading-none">27</span>
+        </div>
+        <div class="text-ink/60 font-body text-sm mt-2">à vista · ou 2x de R$ 14,50 no cartão</div>
+
+        <a href="#" data-checkout class="btn-primary mt-7 w-full font-body font-extrabold text-base md:text-lg px-6 py-5 rounded-lg inline-flex items-center justify-center gap-3">
+          QUERO MEUS 7 DIAS AGORA
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <div class="mt-4 flex items-center justify-center gap-4 text-xs text-ink/55 font-body flex-wrap">
+          <span class="flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"/></svg>
+            Pagamento seguro Hotmart
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+            Acesso imediato no email
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GUARANTEE ==================== -->
+<section class="paper-bg py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-4 grid md:grid-cols-[auto,1fr] gap-8 md:gap-12 items-center">
+
+    <!-- Seal -->
+    <div class="flex justify-center">
+      <div class="relative w-40 h-40 md:w-52 md:h-52">
+        <svg viewBox="0 0 200 200" class="w-full h-full seal-ring">
+          <defs>
+            <path id="circlePath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
+          </defs>
+          <circle cx="100" cy="100" r="94" fill="none" stroke="#9E7A2E" stroke-width="1"/>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#9E7A2E" stroke-width="1.5" stroke-dasharray="2 4"/>
+          <text font-family="Fraunces, serif" font-size="11" font-weight="600" fill="#9E7A2E" letter-spacing="3">
+            <textPath href="#circlePath" startOffset="0">GARANTIA INCONDICIONAL · 7 DIAS · RISCO ZERO · </textPath>
+          </text>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div class="font-display font-bold text-4xl md:text-6xl text-wine italic leading-none">7</div>
+          <div class="font-display text-xs md:text-sm text-ink/70 uppercase tracking-widest mt-1">dias</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="ornament">Sua garantia</div>
+      <h2 class="mt-5 font-display font-bold text-3xl md:text-4xl leading-tight text-ink tracking-tight">
+        Testa por 7 dias.<br/>Se não gostar, <span class="italic text-wine">eu devolvo seu dinheiro.</span>
+      </h2>
+      <p class="mt-5 text-lg text-ink/80 leading-relaxed">
+        Você entra, assiste as aulas, pega a sua gaita e testa o método. Se em 7 dias sentir que não é pra você — pede o reembolso e recebe os R$27 de volta. Sem pergunta. Sem burocracia.
+      </p>
+      <p class="mt-4 font-display italic text-xl text-wine">
+        O risco é zero. A única coisa que você pode perder é a chance de descobrir que você consegue — sim.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="bg-bone py-16 md:py-24">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center">
+      <div class="ornament justify-center w-full flex">Perguntas frequentes</div>
+      <h2 class="mt-6 font-display font-bold text-3xl md:text-5xl leading-tight text-ink tracking-tight">
+        O que quase todo mundo<br/><span class="italic text-wine">pergunta antes.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 space-y-3">
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold group">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Eu nunca toquei nada. Serve pra mim?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Serve. O método começa do absoluto zero — sem precisar ler partitura, sem saber teoria, sem experiência musical nenhuma. Foi feito pensando em quem está pegando a gaita pela primeira vez na vida.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Com a minha idade ainda dá?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Dá sim. A maioria dos alunos do Flavinho tem entre 50 e 70 anos. Muitos começaram do zero absoluto e hoje tocam em festas, encontros e eventos. Não existe idade limite pra aprender gaita.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Já tentei outros cursos e travei. Por que esse é diferente?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Porque esse não te dá música pra decorar. Ele te mostra passo a passo como juntar as duas mãos — que é onde quase todo mundo trava. Cada dia resolve uma barreira específica.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Quanto tempo preciso estudar por dia?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Entre 20 e 30 minutos por dia. O método foi feito pra quem tem pouco tempo — e funciona igualmente bem pra quem tem muito.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Como acesso as aulas?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Depois da compra, você recebe um email da Hotmart com login e senha. Acessa pelo celular, computador ou tablet — onde e quando quiser. É pra sempre.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          Preciso ter uma gaita pra começar?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Sim — é importante ter o instrumento pra praticar junto das aulas. Se ainda não tem, pode começar a ver as aulas iniciais e ir se organizando pra comprar.</p>
+      </details>
+
+      <details class="bg-cream rounded-xl px-5 md:px-6 hair-gold">
+        <summary class="py-5 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-ink">
+          E se eu não gostar?
+          <span class="chev text-gold text-2xl font-light shrink-0">+</span>
+        </summary>
+        <p class="pb-5 text-ink/80 font-body leading-relaxed">Você tem 7 dias pra pedir reembolso total, sem perguntas. Recebe 100% do valor de volta. Garantido por lei e pela Hotmart.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="ink-bg text-cream py-20 md:py-28 relative overflow-hidden">
+  <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+    <div class="ornament text-gold justify-center w-full flex">A decisão</div>
+    <h2 class="mt-6 font-display font-bold text-4xl md:text-6xl leading-[1.05] tracking-tight">
+      A gaita tá aí.<br/>O método tá aqui.<br/><span class="italic text-gold">Só falta você.</span>
+    </h2>
+
+    <p class="mt-8 text-lg md:text-xl text-bone/85 leading-relaxed max-w-xl mx-auto">
+      Em 7 dias, você pode estar tocando sua primeira música completa. Com as duas mãos. Do jeito que sempre sonhou.
+    </p>
+    <p class="mt-4 text-lg md:text-xl text-bone/70 leading-relaxed max-w-xl mx-auto">
+      Ou pode estar no mesmo lugar de hoje — olhando a gaita no canto, se perguntando se um dia vai conseguir.
+    </p>
+
+    <p class="mt-10 font-display italic text-2xl md:text-3xl text-goldSoft">
+      A decisão é de R$27.
+    </p>
+
+    <div class="mt-8">
+      <a href="#oferta" class="btn-primary font-body font-extrabold text-base md:text-xl px-8 md:px-10 py-5 rounded-lg inline-flex items-center gap-3">
+        COMEÇAR MEUS 7 DIAS AGORA
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="mt-4 text-xs text-bone/55 font-body">
+      Acesso imediato · Garantia de 7 dias · Pagamento seguro Hotmart
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-coal text-bone/60 py-10 px-4 text-center text-xs md:text-sm font-body">
+  <div class="max-w-3xl mx-auto space-y-3">
+    <div class="font-display text-cream text-base font-bold">Flavinho Alves · Escola de Gaiteiros</div>
+    <p>
+      Este curso é um produto digital independente, sem vínculo com Facebook, Instagram ou Google.
+      Os resultados apresentados são reais, mas variam conforme a dedicação de cada aluno.
+    </p>
+    <p>
+      <a href="#" class="underline hover:text-gold">Política de Privacidade</a> ·
+      <a href="#" class="underline hover:text-gold">Termos de Uso</a> ·
+      <a href="#" class="underline hover:text-gold">Contato</a>
+    </p>
+    <p class="text-bone/40 pt-2">© 2026 Flavinho Alves. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ==================== STICKY MOBILE CTA ==================== -->
+<div class="sticky-cta fixed bottom-0 left-0 right-0 z-50 md:hidden bg-ink/95 backdrop-blur border-t border-gold/30 px-4 pt-3">
+  <a href="#oferta" class="btn-primary w-full font-body font-extrabold text-sm px-4 py-3.5 rounded-lg inline-flex items-center justify-center gap-2">
+    QUERO MEUS 7 DIAS — R$27 <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+<!-- Spacer so sticky CTA doesn't cover footer content on mobile -->
+<div class="h-20 md:hidden" aria-hidden="true"></div>
+
+</body>
+</html>
