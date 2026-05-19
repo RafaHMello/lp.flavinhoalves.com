@@ -672,5 +672,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Spacer so sticky CTA doesn't cover footer content on mobile -->
 <div class="h-20 md:hidden" aria-hidden="true"></div>
 
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  window.dataLayer.push({
+    event: 'page_view_lp',
+    page_name: 'Sua Primeira Música em 7 Dias',
+    product_name: 'Método Flavinho Alves',
+    value: 27,
+    currency: 'BRL'
+  });
+
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      window.dataLayer.push({
+        event: 'click_checkout',
+        checkout_url: button.href,
+        product_name: 'Método Flavinho Alves',
+        value: 27,
+        currency: 'BRL'
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
