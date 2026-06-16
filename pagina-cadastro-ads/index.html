@@ -303,6 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 // ===== CONFIG =====
 var LEADCONNECTOR_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/sKutSDWwMzupKVPtTEGG/webhook-trigger/147b9927-8f9b-48bb-be93-a75578b7762e';
 var LEAD_LIST = 'GAITEIRO MAO NA MASSA JULHO 2026';
+var THANKYOU_URL = 'https://lp.flavinhoalves.com/EG-obrigado';
 var TRACK_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'];
 
 // ===== CAPTURA E PERSISTENCIA DE TRACKING =====
@@ -349,12 +350,19 @@ function submitLead(btn){
 
   var track=getTracking();
 
-  // ===== PAYLOAD ENVIADO AO WEBHOOK (LeadConnector / GoHighLevel) =====
-  var payload={
+  var lead={
     first_name: name.value.trim(),
     name: name.value.trim(),
     email: email.value.trim(),
-    phone: phone.value.trim(),
+    phone: phone.value.trim()
+  };
+
+  // ===== PAYLOAD ENVIADO AO WEBHOOK (LeadConnector / GoHighLevel) =====
+  var payload={
+    first_name: lead.first_name,
+    name: lead.name,
+    email: lead.email,
+    phone: lead.phone,
     lead_list: LEAD_LIST,
     form_location: card.id || 'inline',
     page_type: 'ads',
@@ -379,28 +387,40 @@ function submitLead(btn){
     utm_content:payload.utm_content, utm_term:payload.utm_term, fbclid:payload.fbclid, gclid:payload.gclid,
     value:0, currency:'BRL'});
 
-  // envia ao webhook do LeadConnector
   btn.textContent='Enviando...';
   btn.disabled=true;
+
+  // garante o redirect uma unica vez, mesmo que o fetch demore ou falhe
+  var redirected=false;
+  function go(){ if(redirected){return;} redirected=true; redirectToThankYou(lead, track); }
+  // timeout de seguranca: nao deixa o usuario travado se o webhook demorar
+  var safety=setTimeout(go, 2500);
+
+  // envia ao webhook do LeadConnector
   fetch(LEADCONNECTOR_WEBHOOK,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify(payload)
   }).then(function(){
-    finishLead(btn, card);
+    clearTimeout(safety); go();
   }).catch(function(){
     // fallback no-cors (garante o disparo mesmo se houver bloqueio de CORS na resposta)
     fetch(LEADCONNECTOR_WEBHOOK,{method:'POST',mode:'no-cors',
       headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    finishLead(btn, card);
+    clearTimeout(safety); go();
   });
 }
 
-function finishLead(btn, card){
-  btn.textContent='\u2713 Inscri\u00e7\u00e3o confirmada!';
-  btn.style.background='#1c8e4c';
-  // Opcional: redirecionar para pagina de obrigado
-  // window.location.href='/obrigado';
+// ===== REDIRECT PARA A PAGINA DE OBRIGADO LEVANDO OS DADOS NA URL =====
+// A pagina de obrigado le ?nome=&email=&phone= (e os UTMs) para identificar o lead.
+function redirectToThankYou(lead, track){
+  var params=new URLSearchParams();
+  params.set('nome', lead.name);
+  params.set('email', lead.email);
+  params.set('phone', lead.phone);
+  // repassa o tracking para nao perder atribuicao entre paginas
+  TRACK_KEYS.forEach(function(k){ if(track[k]){ params.set(k, track[k]); } });
+  window.location.href = THANKYOU_URL + '?' + params.toString();
 }
 </script>
 </body>
