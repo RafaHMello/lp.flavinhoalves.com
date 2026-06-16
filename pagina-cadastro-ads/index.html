@@ -40,26 +40,34 @@ h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.08;
 .topcta:hover{background:var(--green-d);transform:translateY(-1px)}
 
 /* hero */
-.hero{position:relative;background:
-   radial-gradient(120% 90% at 78% 30%, rgba(231,182,103,.32), transparent 55%),
-   linear-gradient(135deg,#0c1729 0%, #13213d 55%, #1a2a4a 100%);
-   color:#fff;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:center;padding-top:44px;padding-bottom:44px;position:relative;z-index:2}
-.hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:36px;padding-bottom:48px;position:relative;z-index:2}
-.hero-copy{position:relative;z-index:3;width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center}
-.hero-right{order:-1;margin-bottom:22px;display:flex;align-items:center;justify-content:center}
-.hero-flav{width:210px;height:210px;object-fit:cover;border-radius:50%;border:4px solid rgba(231,182,103,.55);filter:drop-shadow(0 18px 40px rgba(0,0,0,.5))}
-.hero-form{margin-top:24px;width:100%;max-width:460px;text-align:left}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(231,182,103,.14);border:1px solid rgba(231,182,103,.45);color:var(--gold-soft);font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;padding:8px 15px;border-radius:50px;margin-bottom:20px}
-.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(231,182,103,.25)}
-.hero h1{font-size:clamp(1.85rem,3.7vw,2.7rem);margin-bottom:16px;line-height:1.06}
-.hero h1 small{display:block;font-family:'Inter';font-weight:600;text-transform:none;letter-spacing:0;font-size:.5em;color:var(--gold-soft);margin-bottom:8px}
-.hero .lede{font-size:1rem;color:#cdd5e2;max-width:460px;margin-bottom:18px}
-.badges{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:4px;justify-content:center}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:#dfe6f0;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:7px 13px;border-radius:50px}
-.hero-photo{position:relative}
-.hero-photo img{border-radius:14px;width:100%;box-shadow:0 30px 70px -25px rgba(0,0,0,.7)}
-.free-tag{display:inline-block;background:linear-gradient(90deg,var(--gold),var(--gold-soft));color:#3a2a0c;font-weight:800;font-size:.84rem;letter-spacing:.5px;padding:9px 16px;border-radius:8px;margin-bottom:16px}
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div class="hero-right">
+      <img class="hero-flav" fetchpriority="high" decoding="async" src="SEU_BASE64_AQUI" alt="Flavinho Alves com acordeon">
+    </div>
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>De 13 a 15 de Julho &middot; 20h &middot; Ao vivo no YouTube</span>
+      <h1><small>Gaiteiro M&atilde;o na Massa &middot; com Flavinho Alves</small>
+        Toque suas <span class="gold">primeiras notas no acordeon</span> em 3 dias</h1>
+      <div class="formcard hero-form" id="form-hero">
+        <h3>Garanta sua vaga gratuita</h3>
+        <p class="sub">Preencha abaixo e receba o acesso ao treinamento.</p>
+        <div class="field"><input type="text" name="firstname" placeholder="Digite seu primeiro nome" autocomplete="given-name"><div class="err">Informe seu nome</div></div>
+        <div class="field"><input type="email" name="email" placeholder="Digite seu melhor e-mail" autocomplete="email"><div class="err">Informe um e-mail v&aacute;lido</div></div>
+        <div class="field"><input type="tel" name="phone" placeholder="Digite seu melhor telefone (WhatsApp)" autocomplete="tel"><div class="err">Informe seu telefone</div></div>
+        <button class="btn" type="button" onclick="submitLead(this)">Quero me inscrever</button>
+        <div class="formnote">&#128274; Seus dados est&atilde;o seguros. Sem spam.</div>
+      </div>
+      <p class="lede" style="margin-top:20px">Mesmo que voc&ecirc; nunca tenha pegado um acordeon na vida e n&atilde;o fa&ccedil;a ideia por onde come&ccedil;ar.</p>
+      <div class="badges">
+        <span class="badge">&#10003; 100% gratuito</span>
+        <span class="badge">&#10003; Online e ao vivo</span>
+        <span class="badge">&#10003; Sem enrola&ccedil;&atilde;o</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 /* form card */
 .formcard{background:#fff;border-radius:16px;padding:24px 22px;box-shadow:0 24px 60px -20px rgba(0,0,0,.55);color:var(--ink)}
